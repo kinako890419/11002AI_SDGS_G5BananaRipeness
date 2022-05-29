@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>香蕉分析</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="key.js"></script>
+    <script src="main.js"></script>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2083/2083677.png">
+</head>
+<body>
+    <nav id="nav">
+        <ul>
+            <li><a href="#intro" class="active">永續發展目標</a></li>
+            <li><a href="#bananaAI">香蕉熟度分析</a></li>
+            <li><a href="#reference">參考資料</a></li>
+        </ul>
+    </nav>
+    
+    <div id="intro" class="homediv">
+        <div class="homeimg">
+            <a href="https://futurecity.cw.com.tw/article/1867#2" target="_blank">
+                <img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d482a7718.jpg">
+            </a>
+            <a href="https://futurecity.cw.com.tw/article/1867#12" target="_blank">
+                <img src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d853f2f50.jpg">
+            </a> 
+        </div>
+    </div>
+
+    <div>
+        <section id="bananaAI" class="main special">
+            <h1><img src="https://c.tenor.com/ZgbW9V5PKoMAAAAM/banana-dance-dancing-banana.gif" width="40">香蕉熟度分析<img src="https://c.tenor.com/ZgbW9V5PKoMAAAAM/banana-dance-dancing-banana.gif" width="40"></h1>
+                <div>輸入一個水果的圖片網址，然後按下 <strong>分析圖片</strong> 按鈕.</div>
+            <div>
+                <div>
+                    Image to analyze
+                    <input type="text" name="inputImage" id="inputImage" 
+                     value="https://images.chinatimes.com/newsphoto/2020-10-10/1024/20201010003336.jpg" />
+                    <button id="thisButton">分析圖片</button>
+                </div> 
+            </div>
+            
+            <div id="imgAI">
+                <div id="wrapper" style="width:1020px; display:table;">
+                    <div id="jsonOutput" style="width:400px; display:table-cell;">
+                     分析結果
+                        <br><br>
+                        <textarea id="responseTextArea" class="UIInput" style="width:600px; height:200px;"></textarea>
+                    </div>
+                 <div id="imageDiv" style="width:420px; display:table-cell;">
+                     Source image
+                        <br><br>
+                        <img id="sourceImage" width="310" />
+                 </div>
+                 
+                </div>
+                
+            </div>
+            <div id="picDescription"></div>
+        </section>
+    </div>
+    <hr>
+    <div id="reference">
+        <h2>
+            參考資料:github banana-ripeness-classification、FIDS30
+        </h2>
+        <a href="https://github.com/giovannipcarvalho/banana-ripeness-classification" target="_blank">
+            <img src="https://github.com/giovannipcarvalho/banana-ripeness-classification/blob/master/data/ripe/10000025-2_3-fresho-banana-robusta.jpg?raw=true">
+        </a>
+        <a href="https://www.vicos.si/resources/fids30/" target="_blank">
+            <img src="https://www.vicos.si/resources/fids30/images/All_fruit_samps.png">
+        </a> 
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    
+<script>
+    //Get the button:
+    mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+</script>
+</body>
+</html>
