@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>香蕉分析</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="key.js"></script>
+    <script src="main.js"></script>
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/2083/2083677.png"
+    />
+  </head>
+  <body>
+    <nav
+      id="nav"
+      class="navbar navbar-dark bg-warning navbar-expand-lg fixed-top"
+    >
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/2083/2083677.png"
+          width="30"
+          height="30"
+          class="d-inline-block align-top"
+          alt=""
+        />
+        BANANA
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link text-dark" href="#intro">永續發展目標 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#bananaAI">香蕉熟度分析</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#reference">參考資料</a>
+          </li>
+        </ul>
+      </div>
+      <!-- <ul>
+        <li><a href="#intro" class="active">永續發展目標</a></li>
+        <li><a href="#bananaAI">香蕉熟度分析</a></li>
+        <li><a href="#reference">參考資料</a></li>
+      </ul> -->
+    </nav>
+    <section class="container py-5 px-5">
+      <div id="intro" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              class="d-block w-100"
+              src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d482a7718.jpg"
+              alt="First slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d853f2f50.jpg"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              class="d-block w-100"
+              src="https://images.unsplash.com/photo-1526364163643-89e30b8fcb70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+              alt="Third slide"
+            />
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleIndicators"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- <div id="intro" class="homediv">
+      <div class="homeimg">
+        <a href="https://futurecity.cw.com.tw/article/1867#2" target="_blank">
+          <img
+            src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d482a7718.jpg"
+          />
+        </a>
+        <a href="https://futurecity.cw.com.tw/article/1867#12" target="_blank">
+          <img
+            src="https://storage.googleapis.com/futurecity-cms-cwg-tw/ckeditor/202101/ckeditor-6010d853f2f50.jpg"
+          />
+        </a>
+      </div>
+    </div> -->
+
+    <section id="bananaAI" class="container">
+      <h1>
+        <img
+          src="https://c.tenor.com/ZgbW9V5PKoMAAAAM/banana-dance-dancing-banana.gif"
+          width="40"
+        />香蕉熟度分析<img
+          src="https://c.tenor.com/ZgbW9V5PKoMAAAAM/banana-dance-dancing-banana.gif"
+          width="40"
+        />
+      </h1>
+      <div>
+        輸入一個水果的圖片網址，然後按下 <strong>分析圖片</strong> 按鈕.
+      </div>
+      <div>
+        <div>
+          Image to analyze
+          <input
+            type="text"
+            name="inputImage"
+            id="inputImage"
+            value="https://images.chinatimes.com/newsphoto/2020-10-10/1024/20201010003336.jpg"
+          />
+          <button id="thisButton">分析圖片</button>
+        </div>
+      </div>
+
+      <div id="imgAI" class="row">
+        <div id="wrapper" style="width: 1020px; display: table" class="col-6">
+          <div id="jsonOutput" style="width: 400px; display: table-cell">
+            分析結果
+            <br /><br />
+            <textarea
+              id="responseTextArea"
+              class="UIInput"
+              style="width: 600px; height: 200px"
+            ></textarea>
+          </div>
+          <div
+            id="imageDiv"
+            style="width: 420px; display: table-cell"
+            class="col-6"
+          >
+            Source image
+            <br /><br />
+            <img id="sourceImage" width="310" />
+          </div>
+        </div>
+      </div>
+      <div id="picDescription"></div>
+    </section>
+
+    <hr />
+    <div id="reference">
+      <h2>參考資料:github banana-ripeness-classification、FIDS30</h2>
+      <a
+        href="https://github.com/giovannipcarvalho/banana-ripeness-classification"
+        target="_blank"
+      >
+        <img
+          src="https://github.com/giovannipcarvalho/banana-ripeness-classification/blob/master/data/ripe/10000025-2_3-fresho-banana-robusta.jpg?raw=true"
+        />
+      </a>
+      <a href="https://www.vicos.si/resources/fids30/" target="_blank">
+        <img
+          src="https://www.vicos.si/resources/fids30/images/All_fruit_samps.png"
+        />
+      </a>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      //Get the button:
+      mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
+    </script>
+  </body>
+</html>
